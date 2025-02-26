@@ -128,7 +128,7 @@ networks:
   ```bash
   docker compose up -d
   ```
-3 - Acesse a aplicação:
+3 - Acesse a aplicação:  
 Abra o navegador e acesse `http://localhost:9000`.
 
 4 - Acesse o banco de dados:
