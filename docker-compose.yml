@@ -1,0 +1,39 @@
+services:
+  app:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: php7.4-cli-multas
+    ports:
+      - "9000:9000"
+    volumes:
+      - ./src:/var/www/html
+    depends_on:
+      - db
+    environment:
+      - DB_HOST=db
+      - DB_USER=root
+      - DB_PASSWORD=123456
+      # - DB_NAME=meu_banco
+    networks:
+      - php7.4-net
+
+  db:
+    image: mariadb:10.6
+    container_name: mariadb-multas
+    environment:
+      MYSQL_ROOT_PASSWORD: 123456
+      # MYSQL_DATABASE: meu_banco
+    ports:
+      - "3306:3306"
+    volumes:
+      - db_data:/var/lib/mysql
+    networks:
+      - php7.4-net
+
+volumes:
+  db_data:
+
+networks:
+  php7.4-net:
+    driver: bridge

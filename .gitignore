@@ -1,0 +1,51 @@
+# Ignora tudo dentro da pasta src/
+/src/*
+
+# Exceção: Mantém a estrutura da pasta src (opcional, se quiser manter a pasta vazia no repositório)
+!/src/
+!/src/.gitkeep
+
+# Ignora arquivos de ambiente e configurações sensíveis
+.env
+.env.local
+.env.*.local
+
+# Ignora arquivos de configuração do IDE
+.idea/
+.vscode/
+*.swp
+*.swo
+
+# Ignora dependências do Composer
+/vendor/
+
+# Ignora cache e logs
+/storage/*
+!/.gitkeep
+
+# Ignora arquivos gerados pelo Docker
+docker-compose.override.yml
+docker-compose.*.yml
+
+# Ignora arquivos de log do Docker
+*.log
+
+# Ignora arquivos de banco de dados e backups
+*.sql
+*.dump
+*.bak
+
+# Ignora arquivos de sistema
+.DS_Store
+Thumbs.db
+
+# Ignora arquivos temporários
+/tmp/
+/temp/
+
+# Ignora arquivos do Composer
+composer.lock
+composer.phar
+
+# Ignora arquivos de cache do PHP
+.phpunit.result.cache
