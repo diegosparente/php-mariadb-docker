@@ -28,7 +28,7 @@ Arquivos de Configuração
   ```php
   define("PROJECT_NAME","/");
   ```
-  - database.php: Configura as credenciais do banco de dados
+  - `database.php`: Configura as credenciais do banco de dados
   ```php
   'hostname' => 'db',
   'username' => 'root',
